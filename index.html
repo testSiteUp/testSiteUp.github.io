@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Take My Pic </title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div class="container">
+        <div class="col-lg-12">
+            <h1>Take My Pic</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" id="myCamera" style="width:400px; height:400px;"></div>
+            <div class="col-lg-6" id="myResult"></div>
+        </div>
+        <script language="JavaScript">
+            Webcam.attach( '#myCamera' );
+
+            function take_snapshot() {
+                Webcam.snap( function(data_uri) {
+                    document.getElementById('myResult').innerHTML = '<img src="'+data_uri+'"/>';
+            } );
+            }
+        </script>
+        <div class="col-lg-12">
+        <a href="javascript:void(take_snapshot())">Say Cheese...!!!</a>
+        </div>
+    </div>
+      
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/webcam.js"></script>
+  </body>
+</html>
