@@ -18,14 +18,14 @@
         </div>
         <div class="row">
             <div class="col-lg-6" id="myCamera"></div>
-            <div class="col-lg-6" id="myResult"></div>
+            <div class="col-lg-6" id="myResult" style="height:400px; width:400px;"></div>
         </div>
         <script language="JavaScript">
             Webcam.attach( '#myCamera' );
 
             function take_snapshot() {
                 Webcam.snap( function(data_uri) {
-                    document.getElementById('myResult').innerHTML = '<img src="'+data_uri+'" width="400px" height="400px"/>';
+                    document.getElementById('myResult').innerHTML = '<img src="'+data_uri+'"/>';
             } );
             }
         </script>
